@@ -1,0 +1,275 @@
+
+ygH@DESKTOP-4D3IGNH MINGW64 /e/danse_jrnl-main_Lab/run (main)
+$ E:\ANACONDA3\envs\DKF\python.exe E:/danse_jrnl-main_Lab/run/run_generate_data.sh
+bash: E:ANACONDA3envsDKFpython.exe: command not found
+
+ygH@DESKTOP-4D3IGNH MINGW64 /e/danse_jrnl-main_Lab/run (main)
+$ ./run_generate_data.sh
+E:\ANACONDA3\envs\DKF\python.exe: can't open file 'E:\\danse_jrnl-main_Lab\\run\\bin\\generate_data.py': [Errno 2] No such file or directory
+E:\ANACONDA3\envs\DKF\python.exe: can't open file 'E:\\danse_jrnl-main_Lab\\run\\bin\\generate_data.py': [Errno 2] No such file or directory
+E:\ANACONDA3\envs\DKF\python.exe: can't open file 'E:\\danse_jrnl-main_Lab\\run\\bin\\generate_data.py': [Errno 2] No such file or directory
+E:\ANACONDA3\envs\DKF\python.exe: can't open file 'E:\\danse_jrnl-main_Lab\\run\\bin\\generate_data.py': [Errno 2] No such file or directory
+E:\ANACONDA3\envs\DKF\python.exe: can't open file 'E:\\danse_jrnl-main_Lab\\run\\bin\\generate_data.py': [Errno 2] No such file or directory
+
+ygH@DESKTOP-4D3IGNH MINGW64 /e/danse_jrnl-main_Lab/run (main)
+$ cd ..
+
+ygH@DESKTOP-4D3IGNH MINGW64 /e/danse_jrnl-main_Lab (main)
+$ ./run_generate_data.sh
+bash: ./run_generate_data.sh: No such file or directory
+
+ygH@DESKTOP-4D3IGNH MINGW64 /e/danse_jrnl-main_Lab (main)
+$ ./run/run_generate_data.sh
+Creating the data file: ./data/synthetic_data/trajectories_m_3_n_3_LorenzSSM_data_T_100_N_1000_sigmae2_-10.0dB_smnr_-10.0dB.pkl
+E:\ANACONDA3\envs\DKF\lib\site-packages\numpy\core\shape_base.py:121: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray.
+  ary = asanyarray(ary)
+Done...
+Dataset ./data/synthetic_data/trajectories_m_3_n_3_LorenzSSM_data_T_100_N_1000_sigmae2_-10.0dB_smnr_0.0dB.pkl is already present!
+Done...
+Creating the data file: ./data/synthetic_data/trajectories_m_3_n_3_LorenzSSM_data_T_100_N_1000_sigmae2_-10.0dB_smnr_10.0dB.pkl
+E:\ANACONDA3\envs\DKF\lib\site-packages\numpy\core\shape_base.py:121: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray.
+  ary = asanyarray(ary)
+Done...
+Creating the data file: ./data/synthetic_data/trajectories_m_3_n_3_LorenzSSM_data_T_100_N_1000_sigmae2_-10.0dB_smnr_20.0dB.pkl
+E:\ANACONDA3\envs\DKF\lib\site-packages\numpy\core\shape_base.py:121: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray.
+  ary = asanyarray(ary)
+Done...
+Creating the data file: ./data/synthetic_data/trajectories_m_3_n_3_LorenzSSM_data_T_100_N_1000_sigmae2_-10.0dB_smnr_30.0dB.pkl
+E:\ANACONDA3\envs\DKF\lib\site-packages\numpy\core\shape_base.py:121: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray.
+  ary = asanyarray(ary)
+Done...
+
+ygH@DESKTOP-4D3IGNH MINGW64 /e/danse_jrnl-main_Lab (main)
+$ ./run/run_main_danse.sh
+datafile: ./data/synthetic_data//trajectories_m_3_n_3_LorenzSSM_data_T_100_N_1000_sigmae2_-10.0dB_smnr_-10.0dB.pkl
+trajectories_m_3_n_3_LorenzSSM_data_T_100_N_1000_sigmae2_-10.0dB_smnr_-10.0dB.pkl
+Device Used:cuda:0
+Dataset already present!
+[[1. 0. 0.]
+ [0. 1. 0.]
+ [0. 0. 1.]]
+Total number of samples: 1000
+Training + val to test split: 0.9
+Training to val split: 0.833
+749 151 100
+Creating split file at:./data/synthetic_data//splits_m_3_n_3_LorenzSSM_data_T_100_N_1000_sigmae2_-10.0dB_smnr_-10.0dB.pkl
+No. of training, validation and testing batches: 12, 3, 2
+Is log-directory present:? - False
+Is log-file present:? - False
+Is model-directory present:? - False
+Creating ./log/LorenzSSM_danse_opt_gru_m_3_n_3_T_100_N_1000_sigmae2_-10.0dB_smnr_-10.0dB
+Creating ./models/LorenzSSM_danse_opt_gru_m_3_n_3_T_100_N_1000_sigmae2_-10.0dB_smnr_-10.0dB
+
+ Config: {'n_states': 3, 'n_obs': 3, 'mu_w': array([0., 0., 0.]), 'C_w': array([[2196.59160332,    0.        ,    0.        ],
+       [   0.        , 2196.59160332,    0.        ],
+       [   0.        ,    0.        , 2196.59160332]]), 'H': array([[1., 0., 0.],
+       [0., 1., 0.],
+       [0., 0., 1.]]), 'mu_x0': array([0., 0., 0.]), 'C_x0': array([[1., 0., 0.],
+       [0., 1., 0.],
+       [0., 0., 1.]]), 'batch_size': 64, 'rnn_type': 'gru', 'device': device(type='cuda', index=0), 'rnn_params_dict': {'gru': {'model_type': 'gru', 'input_size': 3, 'output_size': 3, 'n_hidden': 30, 'n_layers': 1, 'lr': 0.01, 'num_epochs': 2000, 'min_delta': 0.05, 'n_hidde
+n_dense': 32, 'device': device(type='cuda', index=0)}, 'rnn': {'model_type': 'gru', 'input_size': 3, 'output_size': 3, 'n_hidden': 40, 'n_layers': 2, 'lr': 0.001, 'num_epochs': 300, 'min_delta': 0.001, 'n_hidden_dense': 32, 'device': device(type='cuda', index=0)}, 'lstm': {'model_type': 'lstm', 'input_size': 3, 'output_size': 3, 'n_hidden': 40, 'n_layers': 2, 'lr': 0.001, 'num_epochs': 300, 'min_delta': 0.001, 'n_hidden_dense': 32, 'device': device(type='cuda', index=0)}}}
+
+No. of trainable parameters: 4340
+
+Epoch: 1/2000, Training NLL:3.534594774, Val. NLL:3.521913052, Val. MSE:162.313879822
+Epoch: 50/2000, Training NLL:3.491819342, Val. NLL:3.496381601, Val. MSE:117.238852668
+Epoch: 100/2000, Training NLL:3.490654031, Val. NLL:3.502874056, Val. MSE:117.606839822
+Epoch: 150/2000, Training NLL:3.488502820, Val. NLL:3.501499097, Val. MSE:123.000381483
+Epoch: 200/2000, Training NLL:3.486829182, Val. NLL:3.497442166, Val. MSE:122.894322212
+Epoch: 250/2000, Training NLL:3.487566710, Val. NLL:3.504280567, Val. MSE:130.512566234
+Epoch: 300/2000, Training NLL:3.487172544, Val. NLL:3.498517831, Val. MSE:126.649514668
+Epoch: 350/2000, Training NLL:3.486190001, Val. NLL:3.506813367, Val. MSE:132.806686583
+Epoch: 400/2000, Training NLL:3.486537258, Val. NLL:3.501853387, Val. MSE:134.330301654
+Epoch: 450/2000, Training NLL:3.488458117, Val. NLL:3.496073802, Val. MSE:126.876334046
+Epoch: 500/2000, Training NLL:3.487244745, Val. NLL:3.493731737, Val. MSE:126.718240829
+Epoch: 550/2000, Training NLL:3.486937384, Val. NLL:3.500434717, Val. MSE:129.388592058
+Epoch: 600/2000, Training NLL:3.486963630, Val. NLL:3.500882626, Val. MSE:129.600732438
+Epoch: 650/2000, Training NLL:3.488552749, Val. NLL:3.498705546, Val. MSE:130.642238077
+Training convergence attained! Saving model at Epoch: 671
+datafile: ./data/synthetic_data//trajectories_m_3_n_3_LorenzSSM_data_T_100_N_1000_sigmae2_-10.0dB_smnr_0.0dB.pkl
+trajectories_m_3_n_3_LorenzSSM_data_T_100_N_1000_sigmae2_-10.0dB_smnr_0.0dB.pkl
+Device Used:cuda:0
+Dataset already present!
+[[1. 0. 0.]
+ [0. 1. 0.]
+ [0. 0. 1.]]
+Total number of samples: 1000
+Training + val to test split: 0.9
+Training to val split: 0.833
+749 151 100
+Creating split file at:./data/synthetic_data//splits_m_3_n_3_LorenzSSM_data_T_100_N_1000_sigmae2_-10.0dB_smnr_0.0dB.pkl
+No. of training, validation and testing batches: 12, 3, 2
+Is log-directory present:? - False
+Is log-file present:? - False
+Is model-directory present:? - False
+Creating ./log/LorenzSSM_danse_opt_gru_m_3_n_3_T_100_N_1000_sigmae2_-10.0dB_smnr_0.0dB
+Creating ./models/LorenzSSM_danse_opt_gru_m_3_n_3_T_100_N_1000_sigmae2_-10.0dB_smnr_0.0dB
+
+ Config: {'n_states': 3, 'n_obs': 3, 'mu_w': array([0., 0., 0.]), 'C_w': array([[297.89028864,   0.        ,   0.        ],
+       [  0.        , 297.89028864,   0.        ],
+       [  0.        ,   0.        , 297.89028864]]), 'H': array([[1., 0., 0.],
+       [0., 1., 0.],
+       [0., 0., 1.]]), 'mu_x0': array([0., 0., 0.]), 'C_x0': array([[1., 0., 0.],
+       [0., 1., 0.],
+       [0., 0., 1.]]), 'batch_size': 64, 'rnn_type': 'gru', 'device': device(type='cuda', index=0), 'rnn_params_dict': {'gru': {'model_type': 'gru', 'input_size': 3, 'output_size': 3, 'n_hidden': 30, 'n_layers': 1, 'lr': 0.01, 'num_epochs': 2000, 'min_delta': 0.05, 'n_hidde
+n_dense': 32, 'device': device(type='cuda', index=0)}, 'rnn': {'model_type': 'gru', 'input_size': 3, 'output_size': 3, 'n_hidden': 40, 'n_layers': 2, 'lr': 0.001, 'num_epochs': 300, 'min_delta': 0.001, 'n_hidden_dense': 32, 'device': device(type='cuda', index=0)}, 'lstm': {'model_type': 'lstm', 'input_size': 3, 'output_size': 3, 'n_hidden': 40, 'n_layers': 2, 'lr': 0.001, 'num_epochs': 300, 'min_delta': 0.001, 'n_hidden_dense': 32, 'device': device(type='cuda', index=0)}}}
+
+No. of trainable parameters: 4340
+
+Epoch: 1/2000, Training NLL:2.747614900, Val. NLL:2.596116304, Val. MSE:149.787743399
+Epoch: 50/2000, Training NLL:2.357847730, Val. NLL:2.357992093, Val. MSE:21.185793430
+Epoch: 100/2000, Training NLL:2.354849994, Val. NLL:2.359289010, Val. MSE:20.503658461
+Epoch: 150/2000, Training NLL:2.353259722, Val. NLL:2.360394001, Val. MSE:20.015089481
+Epoch: 200/2000, Training NLL:2.353101989, Val. NLL:2.364031394, Val. MSE:20.131834893
+Epoch: 250/2000, Training NLL:2.352730970, Val. NLL:2.362642845, Val. MSE:24.085558592
+Epoch: 300/2000, Training NLL:2.351885974, Val. NLL:2.361239115, Val. MSE:21.549438971
+Epoch: 350/2000, Training NLL:2.351407111, Val. NLL:2.364934921, Val. MSE:25.117033215
+Epoch: 400/2000, Training NLL:2.355255922, Val. NLL:2.367527882, Val. MSE:25.283559338
+Epoch: 450/2000, Training NLL:2.351651887, Val. NLL:2.366609255, Val. MSE:23.475535831
+Epoch: 500/2000, Training NLL:2.353153805, Val. NLL:2.361864487, Val. MSE:24.243208096
+Epoch: 550/2000, Training NLL:2.353429258, Val. NLL:2.361910105, Val. MSE:24.784030828
+Epoch: 600/2000, Training NLL:2.350796600, Val. NLL:2.360664368, Val. MSE:23.707490769
+Epoch: 650/2000, Training NLL:2.350193580, Val. NLL:2.360677004, Val. MSE:23.686799177
+Training convergence attained! Saving model at Epoch: 671
+datafile: ./data/synthetic_data//trajectories_m_3_n_3_LorenzSSM_data_T_100_N_1000_sigmae2_-10.0dB_smnr_10.0dB.pkl
+trajectories_m_3_n_3_LorenzSSM_data_T_100_N_1000_sigmae2_-10.0dB_smnr_10.0dB.pkl
+Device Used:cuda:0
+Dataset already present!
+[[1. 0. 0.]
+ [0. 1. 0.]
+ [0. 0. 1.]]
+Total number of samples: 1000
+Training + val to test split: 0.9
+Training to val split: 0.833
+749 151 100
+Creating split file at:./data/synthetic_data//splits_m_3_n_3_LorenzSSM_data_T_100_N_1000_sigmae2_-10.0dB_smnr_10.0dB.pkl
+No. of training, validation and testing batches: 12, 3, 2
+Is log-directory present:? - False
+Is log-file present:? - False
+Is model-directory present:? - False
+Creating ./log/LorenzSSM_danse_opt_gru_m_3_n_3_T_100_N_1000_sigmae2_-10.0dB_smnr_10.0dB
+Creating ./models/LorenzSSM_danse_opt_gru_m_3_n_3_T_100_N_1000_sigmae2_-10.0dB_smnr_10.0dB
+
+ Config: {'n_states': 3, 'n_obs': 3, 'mu_w': array([0., 0., 0.]), 'C_w': array([[21.18892388,  0.        ,  0.        ],
+       [ 0.        , 21.18892388,  0.        ],
+       [ 0.        ,  0.        , 21.18892388]]), 'H': array([[1., 0., 0.],
+       [0., 1., 0.],
+       [0., 0., 1.]]), 'mu_x0': array([0., 0., 0.]), 'C_x0': array([[1., 0., 0.],
+       [0., 1., 0.],
+       [0., 0., 1.]]), 'batch_size': 64, 'rnn_type': 'gru', 'device': device(type='cuda', index=0), 'rnn_params_dict': {'gru': {'model_type': 'gru', 'input_size': 3, 'output_size': 3, 'n_hidden': 30, 'n_layers': 1, 'lr': 0.01, 'num_epochs': 2000, 'min_delta': 0.05, 'n_hidde
+n_dense': 32, 'device': device(type='cuda', index=0)}, 'rnn': {'model_type': 'gru', 'input_size': 3, 'output_size': 3, 'n_hidden': 40, 'n_layers': 2, 'lr': 0.001, 'num_epochs': 300, 'min_delta': 0.001, 'n_hidden_dense': 32, 'device': device(type='cuda', index=0)}, 'lstm': {'model_type': 'lstm', 'input_size': 3, 'output_size': 3, 'n_hidden': 40, 'n_layers': 2, 'lr': 0.001, 'num_epochs': 300, 'min_delta': 0.001, 'n_hidden_dense': 32, 'device': device(type='cuda', index=0)}}}
+
+No. of trainable parameters: 4340
+
+Epoch: 1/2000, Training NLL:6.497497638, Val. NLL:3.994702339, Val. MSE:98.572854868
+Epoch: 50/2000, Training NLL:1.232142448, Val. NLL:1.216452281, Val. MSE:8.458360161
+Epoch: 100/2000, Training NLL:1.222362270, Val. NLL:1.215048432, Val. MSE:7.941543702
+Epoch: 150/2000, Training NLL:1.219330957, Val. NLL:1.207813621, Val. MSE:8.244795836
+Epoch: 200/2000, Training NLL:1.217922340, Val. NLL:1.208053788, Val. MSE:8.111450900
+Epoch: 250/2000, Training NLL:1.217201740, Val. NLL:1.215169549, Val. MSE:8.153464410
+Epoch: 300/2000, Training NLL:1.214592069, Val. NLL:1.212324977, Val. MSE:8.449133184
+Epoch: 350/2000, Training NLL:1.213408470, Val. NLL:1.210694949, Val. MSE:7.866746140
+Epoch: 400/2000, Training NLL:1.213611186, Val. NLL:1.210351586, Val. MSE:8.011023617
+Epoch: 450/2000, Training NLL:1.210763206, Val. NLL:1.219846169, Val. MSE:8.960925643
+Epoch: 500/2000, Training NLL:1.210655441, Val. NLL:1.214681427, Val. MSE:7.946976929
+Epoch: 550/2000, Training NLL:1.209358881, Val. NLL:1.217205008, Val. MSE:8.222897543
+Epoch: 600/2000, Training NLL:1.209157526, Val. NLL:1.217209935, Val. MSE:7.764648428
+Epoch: 650/2000, Training NLL:1.207571824, Val. NLL:1.214351575, Val. MSE:7.887455701
+Training convergence attained! Saving model at Epoch: 671
+datafile: ./data/synthetic_data//trajectories_m_3_n_3_LorenzSSM_data_T_100_N_1000_sigmae2_-10.0dB_smnr_20.0dB.pkl
+trajectories_m_3_n_3_LorenzSSM_data_T_100_N_1000_sigmae2_-10.0dB_smnr_20.0dB.pkl
+Device Used:cuda:0
+Dataset already present!
+[[1. 0. 0.]
+ [0. 1. 0.]
+ [0. 0. 1.]]
+Total number of samples: 1000
+Training + val to test split: 0.9
+Training to val split: 0.833
+749 151 100
+Creating split file at:./data/synthetic_data//splits_m_3_n_3_LorenzSSM_data_T_100_N_1000_sigmae2_-10.0dB_smnr_20.0dB.pkl
+No. of training, validation and testing batches: 12, 3, 2
+Is log-directory present:? - False
+Is log-file present:? - False
+Is model-directory present:? - False
+Creating ./log/LorenzSSM_danse_opt_gru_m_3_n_3_T_100_N_1000_sigmae2_-10.0dB_smnr_20.0dB
+Creating ./models/LorenzSSM_danse_opt_gru_m_3_n_3_T_100_N_1000_sigmae2_-10.0dB_smnr_20.0dB
+
+ Config: {'n_states': 3, 'n_obs': 3, 'mu_w': array([0., 0., 0.]), 'C_w': array([[3.12487358, 0.        , 0.        ],
+       [0.        , 3.12487358, 0.        ],
+       [0.        , 0.        , 3.12487358]]), 'H': array([[1., 0., 0.],
+       [0., 1., 0.],
+       [0., 0., 1.]]), 'mu_x0': array([0., 0., 0.]), 'C_x0': array([[1., 0., 0.],
+       [0., 1., 0.],
+       [0., 0., 1.]]), 'batch_size': 64, 'rnn_type': 'gru', 'device': device(type='cuda', index=0), 'rnn_params_dict': {'gru': {'model_type': 'gru', 'input_size': 3, 'output_size': 3, 'n_hidden': 30, 'n_layers': 1, 'lr': 0.01, 'num_epochs': 2000, 'min_delta': 0.05, 'n_hidde
+n_dense': 32, 'device': device(type='cuda', index=0)}, 'rnn': {'model_type': 'gru', 'input_size': 3, 'output_size': 3, 'n_hidden': 40, 'n_layers': 2, 'lr': 0.001, 'num_epochs': 300, 'min_delta': 0.001, 'n_hidden_dense': 32, 'device': device(type='cuda', index=0)}, 'lstm': {'model_type': 'lstm', 'input_size': 3, 'output_size': 3, 'n_hidden': 40, 'n_layers': 2, 'lr': 0.001, 'num_epochs': 300, 'min_delta': 0.001, 'n_hidden_dense': 32, 'device': device(type='cuda', index=0)}}}
+
+No. of trainable parameters: 4340
+
+Epoch: 1/2000, Training NLL:25.774224997, Val. NLL:9.511554718, Val. MSE:23.203970205
+Epoch: 50/2000, Training NLL:0.200587432, Val. NLL:0.184223115, Val. MSE:5.536343922
+Epoch: 100/2000, Training NLL:0.161422969, Val. NLL:0.157545432, Val. MSE:5.646409981
+Epoch: 150/2000, Training NLL:0.159146880, Val. NLL:0.141166056, Val. MSE:5.416506675
+Epoch: 200/2000, Training NLL:0.149931231, Val. NLL:0.138995613, Val. MSE:5.569493694
+Epoch: 250/2000, Training NLL:0.152148026, Val. NLL:0.149586926, Val. MSE:5.286348276
+Epoch: 300/2000, Training NLL:0.150399052, Val. NLL:0.146741311, Val. MSE:5.870275468
+Epoch: 350/2000, Training NLL:0.148131839, Val. NLL:0.140773023, Val. MSE:5.212766021
+Epoch: 400/2000, Training NLL:0.146931842, Val. NLL:0.141079436, Val. MSE:5.124985714
+Epoch: 450/2000, Training NLL:0.142785778, Val. NLL:0.140947426, Val. MSE:5.607705841
+Epoch: 500/2000, Training NLL:0.147540274, Val. NLL:0.138711726, Val. MSE:5.194833950
+Epoch: 550/2000, Training NLL:0.146464457, Val. NLL:0.138842074, Val. MSE:5.155236039
+Epoch: 600/2000, Training NLL:0.145699598, Val. NLL:0.141298999, Val. MSE:5.536650353
+Epoch: 650/2000, Training NLL:0.141760953, Val. NLL:0.155754546, Val. MSE:5.622449607
+Training convergence attained! Saving model at Epoch: 674
+datafile: ./data/synthetic_data//trajectories_m_3_n_3_LorenzSSM_data_T_100_N_1000_sigmae2_-10.0dB_smnr_30.0dB.pkl
+trajectories_m_3_n_3_LorenzSSM_data_T_100_N_1000_sigmae2_-10.0dB_smnr_30.0dB.pkl
+Device Used:cuda:0
+Dataset already present!
+[[1. 0. 0.]
+ [0. 1. 0.]
+ [0. 0. 1.]]
+Total number of samples: 1000
+Training + val to test split: 0.9
+Training to val split: 0.833
+749 151 100
+Creating split file at:./data/synthetic_data//splits_m_3_n_3_LorenzSSM_data_T_100_N_1000_sigmae2_-10.0dB_smnr_30.0dB.pkl
+No. of training, validation and testing batches: 12, 3, 2
+Is log-directory present:? - False
+Is log-file present:? - False
+Is model-directory present:? - False
+Creating ./log/LorenzSSM_danse_opt_gru_m_3_n_3_T_100_N_1000_sigmae2_-10.0dB_smnr_30.0dB
+Creating ./models/LorenzSSM_danse_opt_gru_m_3_n_3_T_100_N_1000_sigmae2_-10.0dB_smnr_30.0dB
+
+ Config: {'n_states': 3, 'n_obs': 3, 'mu_w': array([0., 0., 0.]), 'C_w': array([[0.27131146, 0.        , 0.        ],
+       [0.        , 0.27131146, 0.        ],
+       [0.        , 0.        , 0.27131146]]), 'H': array([[1., 0., 0.],
+       [0., 1., 0.],
+       [0., 0., 1.]]), 'mu_x0': array([0., 0., 0.]), 'C_x0': array([[1., 0., 0.],
+       [0., 1., 0.],
+       [0., 0., 1.]]), 'batch_size': 64, 'rnn_type': 'gru', 'device': device(type='cuda', index=0), 'rnn_params_dict': {'gru': {'model_type': 'gru', 'input_size': 3, 'output_size': 3, 'n_hidden': 30, 'n_layers': 1, 'lr': 0.01, 'num_epochs': 2000, 'min_delta': 0.05, 'n_hidde
+n_dense': 32, 'device': device(type='cuda', index=0)}, 'rnn': {'model_type': 'gru', 'input_size': 3, 'output_size': 3, 'n_hidden': 40, 'n_layers': 2, 'lr': 0.001, 'num_epochs': 300, 'min_delta': 0.001, 'n_hidden_dense': 32, 'device': device(type='cuda', index=0)}, 'lstm': {'model_type': 'lstm', 'input_size': 3, 'output_size': 3, 'n_hidden': 40, 'n_layers': 2, 'lr': 0.001, 'num_epochs': 300, 'min_delta': 0.001, 'n_hidden_dense': 32, 'device': device(type='cuda', index=0)}}}
+
+No. of trainable parameters: 4340
+
+Epoch: 1/2000, Training NLL:71.732751211, Val. NLL:15.821754456, Val. MSE:5.351058033
+Epoch: 50/2000, Training NLL:-0.601194113, Val. NLL:-0.607853015, Val. MSE:4.997858960
+Epoch: 100/2000, Training NLL:-0.726661464, Val. NLL:-0.730422338, Val. MSE:5.004336017
+Epoch: 150/2000, Training NLL:-0.731038402, Val. NLL:-0.758211275, Val. MSE:4.873626020
+Epoch: 200/2000, Training NLL:-0.754558444, Val. NLL:-0.743532161, Val. MSE:4.857403935
+Epoch: 250/2000, Training NLL:-0.757026494, Val. NLL:-0.760526975, Val. MSE:4.936557131
+Epoch: 300/2000, Training NLL:-0.735334838, Val. NLL:-0.742496073, Val. MSE:4.930418738
+Epoch: 350/2000, Training NLL:-0.776700124, Val. NLL:-0.781889816, Val. MSE:4.956827337
+Epoch: 400/2000, Training NLL:-0.759273072, Val. NLL:-0.767838379, Val. MSE:5.027453611
+Epoch: 450/2000, Training NLL:-0.767045707, Val. NLL:-0.776407123, Val. MSE:4.906037171
+Epoch: 500/2000, Training NLL:-0.773037677, Val. NLL:-0.784886936, Val. MSE:4.971159896
+Epoch: 550/2000, Training NLL:-0.773149714, Val. NLL:-0.768324176, Val. MSE:4.857179571
+Epoch: 600/2000, Training NLL:-0.782471269, Val. NLL:-0.783516566, Val. MSE:4.894579669
+Epoch: 650/2000, Training NLL:-0.778380379, Val. NLL:-0.779209514, Val. MSE:4.860224782
+Training convergence attained! Saving model at Epoch: 671
+
+ygH@DESKTOP-4D3IGNH MINGW64 /e/danse_jrnl-main_Lab (main)
+$ history > history_log.txt
+
+ygH@DESKTOP-4D3IGNH MINGW64 /e/danse_jrnl-main_Lab (main)
+$
+

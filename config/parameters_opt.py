@@ -561,7 +561,7 @@ def get_parameters(n_states=5, n_obs=5, device='cpu'):
             "lr":1e-3,
             "weight_decay":1e-6,
             "num_epochs":100,
-            "batch_size":100,
+            "batch_size":2,
             "device":device
         },
         "dmm":{

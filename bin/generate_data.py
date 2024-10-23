@@ -229,16 +229,22 @@ if __name__ == "__main__":
         
     parser = argparse.ArgumentParser(description="Input arguments related to creating a dataset for training learning-based methods like DANSE")
     
-    parser.add_argument("--n_states", help="denotes the number of states in the latent model", type=int, default=5)
-    parser.add_argument("--n_obs", help="denotes the number of observations", type=int, default=5)
-    parser.add_argument("--num_samples", help="denotes the number of trajectories to be simulated for each realization", type=int, default=500)
-    parser.add_argument("--sequence_length", help="denotes the length of each trajectory", type=int, default=200)
+    parser.add_argument("--n_states", help="denotes the number of states in the latent model", type=int, default=3)
+    parser.add_argument("--n_obs", help="denotes the number of observations", type=int, default=3)
+    parser.add_argument("--num_samples", help="denotes the number of trajectories to be simulated for each realization", type=int, default=1000)
+    parser.add_argument("--sequence_length", help="denotes the length of each trajectory", type=int, default=100)
     parser.add_argument("--sigma_e2_dB", help="denotes the process noise variance in dB", type=float, default=-10.0)
-    parser.add_argument("--smnr_dB", help="denotes the signal-to-measurement noise in dB", type=float, default=20.0)
-    parser.add_argument("--dataset_type", help="specify type of the SSM (LinearSSM / LorenzSSM / ChenSSM / Lorenz96SSM)", type=str, default=None)
-    parser.add_argument("--output_path", help="Enter full path to store the data file", type=str, default=None)
+    parser.add_argument("--smnr_dB", help="denotes the signal-to-measurement noise in dB", type=float, default=10)
+    parser.add_argument("--dataset_type", help="specify type of the SSM (LinearSSM / LorenzSSM / ChenSSM / Lorenz96SSM)", type=str, default='LorenzSSM' )
+    parser.add_argument("--output_path", help="Enter full path to store the data file", type=str, default="./data/synthetic_data/")
     
-    args = parser.parse_args() 
+    args = parser.parse_args()
+    # args.n_states = 3
+    # args.n_obs = 3
+    # args.num_samples = 1000
+    # args.sequence_length = 100
+    # args.sigma_e2_dB = -10.0
+    # args.smnr_dB = 10.0
 
     n_states = args.n_states
     n_obs = args.n_obs
