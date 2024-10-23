@@ -437,7 +437,7 @@ if __name__ == "__main__":
     t_danse_arr = np.zeros((len(smnr_dB_arr,)))
     t_knet_arr = np.zeros((len(smnr_dB_arr,)))
     snr_arr = np.zeros((len(smnr_dB_arr,)))
-
+    # snr_arr = np.zeros((len(smnr_dB_arr, )))
     model_file_saved_dict = {}
     model_file_saved_dict_knet = {}
 
