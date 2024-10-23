@@ -3,7 +3,7 @@
 # Creator: Anubhab Ghosh, Feb 2024.
 
 # The python kernel version e.g. to run on python 3.8 version use: python3.8
-PYTHON="python3.8"
+PYTHON="python"
 
 # The number of i.i.d. trajectories each of length T that constitute the training data
 N=1000
