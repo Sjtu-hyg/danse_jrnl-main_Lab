@@ -153,7 +153,7 @@ class DANSE(nn.Module):
 def train_danse(model, options, train_loader, val_loader, nepochs, logfile_path, modelfile_path, save_chkpoints, device='cpu', tr_verbose=False):
     
     # Push the model to device and count parameters
-    model = push_model(nets=model, device=device)
+    model = push_model(nets=model, device=device) #model = class DANSE
     total_num_params, total_num_trainable_params = count_params(model)
     
     # Set the model to training
@@ -226,9 +226,9 @@ def train_danse(model, options, train_loader, val_loader, nepochs, logfile_path,
             val_loss_epoch_sum = 0.0
             val_mse_loss_epoch_sum = 0.0
         
-            for i, data in enumerate(train_loader, 0):
+            for i, data in enumerate(train_loader, 0): #train_loader 一共1000条轨迹，按照batchsize拆分成几组
             
-                tr_Y_batch, tr_X_batch = data
+                tr_Y_batch, tr_X_batch = data #tr_Y_batch [batchsize,T,n] [64,100,3]
                 optimizer.zero_grad()
                 Y_train_batch = Variable(tr_Y_batch, requires_grad=False).type(torch.FloatTensor).to(device)
                 log_pY_train_batch = -model.forward(Y_train_batch)
@@ -259,7 +259,7 @@ def train_danse(model, options, train_loader, val_loader, nepochs, logfile_path,
                     val_mu_X_predictions_batch, val_var_X_predictions_batch, val_mu_X_filtered_batch, val_var_X_filtered_batch = model.compute_predictions(Y_val_batch)
                     log_pY_val_batch = -model.forward(Y_val_batch)
                     val_loss_epoch_sum += log_pY_val_batch.item()
-                    val_mse_loss_batch = mse_criterion(val_X_batch[:,1:,:].to(device), val_mu_X_filtered_batch)
+                    val_mse_loss_batch = mse_criterion(val_X_batch[:,1:,:].to(device), val_mu_X_filtered_batch) #计算MSE，此处信噪比=0，DANSE的=21(13db) kalmannet=?(F变了)
                     # print statistics
                     val_mse_loss_epoch_sum += val_mse_loss_batch.item()
 

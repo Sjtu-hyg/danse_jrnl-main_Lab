@@ -25,7 +25,7 @@ from config.parameters_opt import get_parameters, get_H_DANSE
 #from utils.plot_functions import plot_measurement_data, plot_measurement_data_axes, plot_state_trajectory, plot_state_trajectory_axes
 
 # Import estimator model and functions
-from src.danse import DANSE, train_danse, test_danse
+from src.danse import DANSE, train_danse, test_danse #DANSE是网络结构
 
 def main():
 
@@ -35,27 +35,45 @@ def main():
     
     parser = argparse.ArgumentParser(description="Input a string indicating the mode of the script \n"\
         "train - training and testing is done, test-only evlaution is carried out")
-    parser.add_argument("--mode", help="Enter the desired mode", type=str)
-    parser.add_argument("--rnn_model_type", help="Enter the desired model (rnn/lstm/gru)", type=str)
-    parser.add_argument("--dataset_type", help="Enter the type of dataset (pfixed/vars/all)", type=str)
-    parser.add_argument("--model_file_saved", help="In case of testing mode, Enter the desired model checkpoint with full path (gru/lstm/rnn)", type=str, default=None)
-    parser.add_argument("--datafile", help="Enter the full path to the dataset", type=str)
-    parser.add_argument("--splits", help="Enter full path to splits file", type=str)
-    
-    args = parser.parse_args() 
-    mode = args.mode
-    model_type = args.rnn_model_type
-    datafile = args.datafile
-    dataset_type = args.dataset_type
+    # parser.add_argument("--mode", help="Enter the desired mode", type=str)
+    # parser.add_argument("--rnn_model_type", help="Enter the desired model (rnn/lstm/gru)", type=str)
+    # parser.add_argument("--dataset_type", help="Enter the type of dataset (pfixed/vars/all)", type=str)
+    # parser.add_argument("--model_file_saved", help="In case of testing mode, Enter the desired model checkpoint with full path (gru/lstm/rnn)", type=str, default=None)
+    # parser.add_argument("--datafile", help="Enter the full path to the dataset", type=str)
+    # parser.add_argument("--splits", help="Enter full path to splits file", type=str)
+    #
+    # args = parser.parse_args()
+    # mode = args.mode
+    # model_type = args.rnn_model_type
+    # datafile = args.datafile
+    # dataset_type = args.dataset_type
+    # datafolder = "".join(datafile.split("/")[i]+"/" for i in range(len(datafile.split("/")) - 1))
+    # model_file_saved = args.model_file_saved
+    # splits_file = args.splits
+
+    # 直接赋值参数
+    mode = "train"  # 或者 "test"
+    model_type = "gru"  # 或者 "lstm" 或 "rnn"
+    dataset_type = "LorenzSSM"  # 或者 "LinearSSM"
+    datafile = "./data/synthetic_data/trajectories_m_3_n_3_LorenzSSM_data_T_100_N_1000_sigmae2_-10.0dB_smnr_0.0dB.pkl"
+    splits_file = "./data/synthetic_data/splits_m_3_n_3_LorenzSSM_data_T_100_N_1000_sigmae2_-10.0dB_smnr_0.0dB.pkl"
+    model_file_saved = None  # 如果在测试模式中需要，可以指定路径
+
+    # 计算数据文件的目录
     datafolder = "".join(datafile.split("/")[i]+"/" for i in range(len(datafile.split("/")) - 1))
-    model_file_saved = args.model_file_saved
-    splits_file = args.splits
-    
-    print("datafile: {}".format(datafile))
-    print(datafile.split('/')[-1])
+
+    # 打印变量以验证
+    print(f"Mode: {mode}")
+    print(f"Model Type: {model_type}")
+    print(f"Dataset Type: {dataset_type}")
+    print(f"Datafile: {datafile}")
+    print(f"Splits File: {splits_file}")
+    print(f"Data Folder: {datafolder}")
+    print("datafile.split('/')[-1]=",datafile.split('/')[-1])
     # Dataset parameters obtained from the 'datafile' variable
-    _, n_states, n_obs, _, T, N_samples, sigma_e2_dB, smnr_dB = parse("{}_m_{:d}_n_{:d}_{}_data_T_{:d}_N_{:d}_sigmae2_{:f}dB_smnr_{:f}dB.pkl", datafile.split('/')[-1])
-    
+    # _, n_states, n_obs, _, T, N_samples, sigma_e2_dB, smnr_dB = parse("{}_m_{:d}_n_{:d}_{}_data_T_{:d}_N_{:d}_sigmae2_{:f}dB_smnr_{:f}dB.pkl", datafile.split('/')[-1])
+    _, n_states, n_obs, _, T, N_samples, sigma_e2_dB, smnr_dB = parse(
+        "{}_m_{:d}_n_{:d}_{}_data_T_{:d}_N_{:d}_sigmae2_{:f}dB_smnr_{:f}dB.pkl", datafile.split('/')[-1])
     ngpu = 1 # Comment this out if you want to run on cpu and the next line just set device to "cpu"
     device = torch.device("cuda:0" if (torch.cuda.is_available() and ngpu>0) else "cpu")
     print("Device Used:{}".format(device))
@@ -110,7 +128,12 @@ def main():
                                                             tr_indices=tr_indices, 
                                                             val_indices=val_indices, 
                                                             test_indices=test_indices)
-
+    for i, data in enumerate(train_loader, 0):
+        tr_Y_batch, tr_X_batch = data
+        print("*******i=",i)
+        print("tr_Y_batch=",len(tr_Y_batch))
+        # print("data", data)
+        print("\n")
     print("No. of training, validation and testing batches: {}, {}, {}".format(len(train_loader), 
                                                                                 len(val_loader), 
                                                                                 len(test_loader)))
